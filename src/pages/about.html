@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"
+    />
+  </head>
+  <body
+    class="bg-bg-light dark:bg-bg-dark font-outfit scroll-smooth overflow-auto"
+  >
+    <header
+      class="px-[30px] md:px-[60px] lg:px-[120px] fixed top-0 left-0 right-0 z-50"
+    >
+      <!-- Header for small screen -->
+      <div
+        class="h-12 w-full bg-white dark:bg-primary-dark mt-8 flex justify-between rounded-2xl items-center px-8 sm:hidden shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
+      >
+        <span class="font-bold text-big-sm dark:text-white">KDADEV</span>
+        <ul class="flex items-center justify-center gap-2">
+          <li>
+            <a class="text-body-sm dark:text-white" href="#">Log in</a>
+          </li>
+          <li
+            class="bg-primary-accent w-12 h-[18px] rounded-2xl flex items-center justify-center"
+          >
+            <a
+              class="text-body-sm text-secondary-accent"
+              href="../index.html#sta-signup"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Header for medium screen -->
+      <div
+        class="hidden sm:flex items-center justify-between bg-white dark:bg-primary-dark mt-8 h-16 rounded-2xl px-8"
+      >
+        <div class="flex justify-center items-center lg:gap-20">
+          <span class="font-bold text-big-md dark:text-white">KDADEV</span>
+          <nav>
+            <ul class="hidden lg:flex items-center gap-20">
+              <li>
+                <a class="text-body dark:text-white" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a class="text-body dark:text-white" href="#">About</a>
+              </li>
+              <li>
+                <a class="text-body dark:text-white" href="./contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <nav>
+          <ul class="flex items-center gap-20 lg:hidden">
+            <li>
+              <a class="text-body dark:text-white" href="../index.html">Home</a>
+            </li>
+            <li>
+              <a class="text-body dark:text-white" href="#">About</a>
+            </li>
+            <li>
+              <a class="text-body dark:text-white" href="./contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul class="flex items-center justify-end gap-2">
+          <button
+            class="hidden group cursor-pointer md:flex h-8 w-8 justify-center dark:bg-primary-dark hover:bg-secondary-accent items-center me-3 bg-white rounded-2xl transition-all duration-500 ease-in-out shadow-[0px_0px_5px_rgba(0,0,0,0.2)]"
+            onclick="changeTheme()"
+          >
+            <i
+              class="fa-solid fa-cloud-moon text-body text-secondary-accent group-hover:text-white"
+            ></i>
+          </button>
+          <li>
+            <a class="text-body dark:text-white" href="#">Log in</a>
+          </li>
+          <li
+            class="group bg-primary-accent hover:bg-secondary-accent w-[70px] h-8 rounded-2xl flex items-center justify-center transition-all duration-500 ease-in-out shadow-[0px_0px_5px_rgba(0,0,0,0.2)]"
+          >
+            <a
+              class="text-body text-secondary-accent group-hover:text-white"
+              href="../index.html#cta-signup"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <footer class="mt-8 sm:mt-12 md:mt-24 w-full">
+      <!-- Footer for Small Screen -->
+      <div
+        class="w-full h-72 bg-white dark:bg-primary-dark md:hidden flex flex-col items-center justify-between px-[30px] py-4"
+      >
+        <div class="flex flex-col">
+          <span class="text-h3-lg dark:text-white font-bold">KDADEV</span>
+          <span class="text-body dark:text-white">Organized by ISTAD</span>
+        </div>
+        <nav class="w-full">
+          <ul class="flex w-full justify-between items-center">
+            <div class="flex items-center justify-start w-[25%]">
+              <li>
+                <a
+                  class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                  href="../index.html"
+                  >Home</a
+                >
+              </li>
+            </div>
+            <div class="flex items-center justify-center w-[25%]">
+              <li>
+                <a
+                  class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                  href="#"
+                  >About</a
+                >
+              </li>
+            </div>
+            <div class="flex items-center justify-center w-[25%]">
+              <li>
+                <a
+                  class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                  href="../index.html#all-products"
+                  >All Products</a
+                >
+              </li>
+            </div>
+            <div class="flex items-center justify-end w-[25%]">
+              <li>
+                <a
+                  class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                  href="#"
+                  onclick="changeTheme()"
+                  >Theme</a
+                >
+              </li>
+            </div>
+          </ul>
+        </nav>
+        <figure class="flex gap-4">
+          <a href="#">
+            <span
+              class="w-8 h-8 flex justify-center items-center bg-white dark:bg-primary-dark rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
+              ><i
+                class="fi fi-brands-facebook text-primary-accent flex justify-center items-center"
+              ></i>
+            </span>
+          </a>
+          <a href="#">
+            <span
+              class="w-8 h-8 flex justify-center items-center bg-white dark:bg-primary-dark rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
+              ><i
+                class="fi fi-brands-tik-tok text-primary-accent flex justify-center items-center"
+              ></i>
+            </span>
+          </a>
+          <a href="#">
+            <span
+              class="w-8 h-8 flex justify-center items-center bg-white dark:bg-primary-dark rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
+              ><i
+                class="fi fi-brands-instagram text-primary-accent flex justify-center items-center"
+              ></i>
+            </span>
+          </a>
+          <a href="#">
+            <span
+              class="w-8 h-8 flex justify-center items-center bg-white dark:bg-primary-dark rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
+              ><i
+                class="fi fi-brands-telegram text-primary-accent flex justify-center items-center"
+              ></i>
+            </span>
+          </a>
+        </figure>
+        <a
+          href="./contact.html"
+          class="text-body font-bold w-full h-8 sm:h-12 flex justify-center items-center bg-primary-accent text-secondary-accent rounded-2xl hover:bg-secondary-accent hover:text-white transition-all duration-300 ease-in-out shadow-[0px_0px_5px_rgba(0,0,0,0.2)]"
+        >
+          Contact Us
+        </a>
+        <hr class="h-[1px] w-full bg-black/90 rounded-2xl dark:bg-white/90" />
+        <span class="text-body dark:text-white"
+          >© 2025 KDADEV. All Rights Reserved.</span
+        >
+      </div>
+
+      <!-- Footer for medium screen -->
+      <div
+        class="hidden md:flex flex-col justify-between py-8 gap-4 w-full h-48 bg-white dark:bg-primary-dark px-[30px] md:px-[60px] lg:px-[120px]"
+      >
+        <article class="w-full flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-h3-lg dark:text-white font-bold">KDADEV</span>
+            <span class="text-body dark:text-white"
+              >© 2025 KDADEV. <br />
+              All Rights Reserved.</span
+            >
+          </div>
+          <nav class="w-[60%] h-full flex items-center justify-center">
+            <ul class="grid grid-cols-3 grid-rows-2 w-full h-full">
+              <div class="flex items-center justify-start">
+                <li>
+                  <a
+                    class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                    href="../index.html"
+                    >Home</a
+                  >
+                </li>
+              </div>
+              <div class="flex items-center justify-start">
+                <li>
+                  <a
+                    class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                    href="#"
+                    >About</a
+                  >
+                </li>
+              </div>
+              <div class="flex items-center justify-start">
+                <li>
+                  <a
+                    class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                    href="#privacy"
+                    >Privacy & Policy</a
+                  >
+                </li>
+              </div>
+              <div class="flex items-center justify-start">
+                <li>
+                  <a
+                    class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                    href="./contact.html"
+                    >Contact</a
+                  >
+                </li>
+              </div>
+              <div class="flex items-center justify-start">
+                <li>
+                  <a
+                    class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                    href="../index.html#all-products"
+                    >All Products</a
+                  >
+                </li>
+              </div>
+              <div class="flex items-center justify-start">
+                <li>
+                  <a
+                    class="text-body border-l-[1px] border-primary-accent px-2 py-1 dark:text-white hover:border-[1px] hover:rounded-2xl transition-all duration-300 ease-in-out active:bg-primary-accent active:text-white"
+                    href="#address"
+                    >Address</a
+                  >
+                </li>
+              </div>
+            </ul>
+          </nav>
+          <a
+            href="./contact.html#contact-us"
+            class="text-body font-bold h-full w-[145px] flex justify-center items-center bg-primary-accent text-secondary-accent rounded-2xl hover:bg-secondary-accent hover:text-white transition-all duration-500 ease-in-out shadow-[0px_0px_5px_rgba(0,0,0,0.2)]"
+          >
+            Contact Us
+          </a>
+        </article>
+        <hr class="h-[1px] w-full bg-black/90 rounded-2xl dark:bg-white/90" />
+        <div class="flex justify-between items-start">
+          <span class="text-body dark:text-white">Organized by ISTAD</span>
+
+          <figure class="flex gap-4">
+            <a href="#">
+              <span
+                class="w-8 h-8 flex justify-center items-center bg-white dark:bg-primary-dark rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
+                ><i
+                  class="fi fi-brands-facebook text-primary-accent flex justify-center items-center"
+                ></i>
+              </span>
+            </a>
+            <a href="#">
+              <span
+                class="w-8 h-8 flex justify-center items-center bg-white dark:bg-primary-dark rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
+                ><i
+                  class="fi fi-brands-tik-tok text-primary-accent flex justify-center items-center"
+                ></i>
+              </span>
+            </a>
+            <a href="#">
+              <span
+                class="w-8 h-8 flex justify-center items-center bg-white dark:bg-primary-dark rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
+                ><i
+                  class="fi fi-brands-instagram text-primary-accent flex justify-center items-center"
+                ></i>
+              </span>
+            </a>
+            <a href="#">
+              <span
+                class="w-8 h-8 flex justify-center items-center bg-white dark:bg-primary-dark rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
+                ><i
+                  class="fi fi-brands-telegram text-primary-accent flex justify-center items-center"
+                ></i>
+              </span>
+            </a>
+          </figure>
+        </div>
+      </div>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>

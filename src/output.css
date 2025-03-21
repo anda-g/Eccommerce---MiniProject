@@ -6,7 +6,13 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(0.637 0.237 25.331);
     --color-red-600: oklch(0.577 0.245 27.325);
+    --color-amber-300: oklch(0.879 0.169 91.605);
+    --color-amber-500: oklch(0.769 0.188 70.08);
+    --color-amber-700: oklch(0.555 0.163 48.998);
+    --color-amber-800: oklch(0.473 0.137 46.201);
+    --color-blue-500: oklch(0.623 0.214 259.815);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -286,6 +292,9 @@
   .h-\[18px\] {
     height: 18px;
   }
+  .h-\[166px\] {
+    height: 166px;
+  }
   .h-\[210px\] {
     height: 210px;
   }
@@ -301,9 +310,6 @@
   .h-\[454px\] {
     height: 454px;
   }
-  .h-\[494\] {
-    height: 494;
-  }
   .h-\[509px\] {
     height: 509px;
   }
@@ -312,6 +318,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -363,6 +372,9 @@
   }
   .resize {
     resize: both;
+  }
+  .resize-none {
+    resize: none;
   }
   .appearance-none {
     appearance: none;
@@ -425,8 +437,8 @@
       margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-  .gap-y-4 {
-    row-gap: calc(var(--spacing) * 4);
+  .gap-y-2 {
+    row-gap: calc(var(--spacing) * 2);
   }
   .overflow-auto {
     overflow: auto;
@@ -451,6 +463,12 @@
   .border-primary-accent {
     border-color: var(--color-primary-accent);
   }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
+  }
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
+  }
   .bg-bg-light {
     background-color: var(--color-bg-light);
   }
@@ -462,6 +480,9 @@
   }
   .bg-primary-accent {
     background-color: var(--color-primary-accent);
+  }
+  .bg-transparent {
+    background-color: transparent;
   }
   .bg-white {
     background-color: var(--color-white);
@@ -517,14 +538,23 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
   .px-\[30px\] {
     padding-inline: 30px;
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
@@ -566,6 +596,12 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .text-amber-700 {
+    color: var(--color-amber-700);
+  }
+  .text-amber-800 {
+    color: var(--color-amber-800);
+  }
   .text-black {
     color: var(--color-black);
   }
@@ -574,6 +610,9 @@
   }
   .text-primary-accent {
     color: var(--color-primary-accent);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-red-600 {
     color: var(--color-red-600);
@@ -689,6 +728,11 @@
       }
     }
   }
+  .focus\:ring-blue-500 {
+    &:focus {
+      --tw-ring-color: var(--color-blue-500);
+    }
+  }
   .focus\:outline-0 {
     &:focus {
       outline-style: var(--tw-outline-style);
@@ -708,6 +752,11 @@
   .sm\:mt-12 {
     @media (width >= 40rem) {
       margin-top: calc(var(--spacing) * 12);
+    }
+  }
+  .sm\:mt-24 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 24);
     }
   }
   .sm\:mb-4 {
@@ -780,11 +829,6 @@
       gap: calc(var(--spacing) * 4);
     }
   }
-  .sm\:gap-y-6 {
-    @media (width >= 40rem) {
-      row-gap: calc(var(--spacing) * 6);
-    }
-  }
   .sm\:rounded-2xl {
     @media (width >= 40rem) {
       border-radius: var(--radius-2xl);
@@ -830,6 +874,11 @@
       font-size: var(--text-h3-lg);
     }
   }
+  .md\:mt-12 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 12);
+    }
+  }
   .md\:mt-20 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 20);
@@ -838,6 +887,11 @@
   .md\:mt-24 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 24);
+    }
+  }
+  .md\:mt-48 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 48);
     }
   }
   .md\:mb-8 {
@@ -855,44 +909,19 @@
       display: none;
     }
   }
-  .md\:w-\[30\%\] {
-    @media (width >= 48rem) {
-      width: 30%;
-    }
-  }
-  .md\:w-\[40\%\] {
-    @media (width >= 48rem) {
-      width: 40%;
-    }
-  }
-  .md\:w-\[60\%\] {
-    @media (width >= 48rem) {
-      width: 60%;
-    }
-  }
-  .md\:w-\[65\%\] {
-    @media (width >= 48rem) {
-      width: 65%;
-    }
-  }
-  .md\:w-\[70\%\] {
-    @media (width >= 48rem) {
-      width: 70%;
-    }
-  }
   .md\:w-\[590px\] {
     @media (width >= 48rem) {
       width: 590px;
     }
   }
+  .md\:w-\[794px\] {
+    @media (width >= 48rem) {
+      width: 794px;
+    }
+  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-  .md\:flex-row {
-    @media (width >= 48rem) {
-      flex-direction: row;
     }
   }
   .md\:gap-8 {
@@ -905,6 +934,11 @@
       padding-inline: calc(var(--spacing) * 8);
     }
   }
+  .md\:px-20 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+  }
   .md\:px-32 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 32);
@@ -915,9 +949,9 @@
       padding-inline: 60px;
     }
   }
-  .md\:text-start {
+  .md\:py-10 {
     @media (width >= 48rem) {
-      text-align: start;
+      padding-block: calc(var(--spacing) * 10);
     }
   }
   .md\:text-big-lg {
@@ -933,6 +967,11 @@
   .md\:text-h2-lg {
     @media (width >= 48rem) {
       font-size: var(--text-h2-lg);
+    }
+  }
+  .lg\:mt-20 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 20);
     }
   }
   .lg\:flex {
@@ -1010,11 +1049,6 @@
       text-align: start;
     }
   }
-  .lg\:text-big-md {
-    @media (width >= 64rem) {
-      font-size: var(--text-big-md);
-    }
-  }
   .lg\:text-body {
     @media (width >= 64rem) {
       font-size: var(--text-body);
@@ -1071,6 +1105,22 @@
     @media (width >= 40rem) {
       &:where(.dark, .dark *) {
         background-color: var(--color-primary-dark);
+      }
+    }
+  }
+  .dark\:md\:dark\:bg-bg-dark {
+    &:where(.dark, .dark *) {
+      @media (width >= 48rem) {
+        &:where(.dark, .dark *) {
+          background-color: var(--color-bg-dark);
+        }
+      }
+    }
+  }
+  .md\:dark\:bg-bg-dark {
+    @media (width >= 48rem) {
+      &:where(.dark, .dark *) {
+        background-color: var(--color-bg-dark);
       }
     }
   }
